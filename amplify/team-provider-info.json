@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cogtutorial-dev-131351-authRole",
+      "UnauthRoleArn": "arn:aws:iam::230395760767:role/amplify-cogtutorial-dev-131351-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::230395760767:role/amplify-cogtutorial-dev-131351-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-cogtutorial-dev-131351-deployment",
+      "UnauthRoleName": "amplify-cogtutorial-dev-131351-unauthRole",
+      "StackName": "amplify-cogtutorial-dev-131351",
+      "StackId": "arn:aws:cloudformation:us-east-2:230395760767:stack/amplify-cogtutorial-dev-131351/47bbcd70-d702-11ed-9066-0a3f3135ccb2",
+      "AmplifyAppId": "d377vlr8sr7hup"
+    }
+  }
+}
