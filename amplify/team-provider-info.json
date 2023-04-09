@@ -10,6 +10,11 @@
       "StackName": "amplify-cogtutorial-dev-131351",
       "StackId": "arn:aws:cloudformation:us-east-2:230395760767:stack/amplify-cogtutorial-dev-131351/47bbcd70-d702-11ed-9066-0a3f3135ccb2",
       "AmplifyAppId": "d377vlr8sr7hup"
+    },
+    "categories": {
+      "auth": {
+        "cogtutorial8610b723": {}
+      }
     }
   }
 }
