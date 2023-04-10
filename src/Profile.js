@@ -24,7 +24,7 @@ export const Profile = () => {
     return (
         <Container>
             <Authenticator>
-                {({ signOut, user }) => (
+                {({ signOut, userInfo }) => (
                     <main>
                         <h1>Lucky you, you have a profile!</h1>
                         <h2>Your username is {user.userName}</h2>
