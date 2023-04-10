@@ -1,12 +1,13 @@
 // render profile info for user.
 // add auth component for sign-up and sign-in
 // render auth form if not signed in, profile UI, sign-out button
-import React, { useState, useEffect } from "react";
-import { Auth } from "aws-amplify";
-import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import React, { useState, useEffect } from 'react';
+import { Auth } from 'aws-amplify';
+import { Authenticator } from '@aws-amplify/ui-react';
 import Container from './Container';
+import '@aws-amplify/ui-react/styles.css';
 
-const Profile = () => {
+export const Profile = () => {
     useEffect(() => {
         checkUser()
     }, []);
@@ -22,13 +23,17 @@ const Profile = () => {
 
     return (
         <Container>
-            <h1>Lucky you, you have a profile!</h1>
-            <h2>Your username is {user.userName}</h2>
-            <h3>You set your email to {user.email}</h3>
-            <h4>We don't intend to call you at {user.phone_number}</h4>
-            <AmplifySignOut />
+            <Authenticator>
+                {({ signOut, user }) => (
+                    <main>
+                        <h1>Lucky you, you have a profile!</h1>
+                        <h2>Your username is {user.userName}</h2>
+                        <h3>You set your email to {user.email}</h3>
+                        <h4>We don't intend to call you at {user.phone_number}</h4>
+                        <button onClick={signOut}>I don't want to be here!</button>
+                    </main>
+                )}
+            </Authenticator>
         </Container>
     );
 };
-
-export default withAuthenticator(Profile);
