@@ -1,9 +1,11 @@
 // hold component to apply reusable styling for components
-export const Container = ({ children }) => {
+export const Container = ({ children }) => (
     <div style={StyleSheet.container}>
         { children }
     </div>
-};
+);
+    
+
 
 const styles = {
     container: {
