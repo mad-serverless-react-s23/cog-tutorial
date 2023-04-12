@@ -9,7 +9,7 @@ import Profile from './Profile';
 import Protected from './Protected';
 import { // buggered this up on my own...
     HashRouter, 
-    Switch, 
+    Routes, 
     Route 
 } from 'react-router-dom';
 import Nav from './Nav';
@@ -31,12 +31,12 @@ const Router = () => {
     return (
         <HashRouter>
             <Nav current={current} />
-            <Switch>
+            <Routes>
                 <Route exact path = "/" component={Public}/>
                 <Route exact path="/protected" component={Protected}/>
                 <Route exact path="/profie" component={Profile}/>
                 <Route component={Public}/>
-            </Switch>
+            </Routes>
         </HashRouter>
     );
 }

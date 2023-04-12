@@ -5,7 +5,7 @@ import {
     HomeOutlined,
     ProfileOutlined,
     FileProtectOutlined
-} from '@antd-design/icons';
+} from '@ant-design/icons';
 
 const Nav = (props) => {
     const { current } = props; // choice from user: where are we? what route?
