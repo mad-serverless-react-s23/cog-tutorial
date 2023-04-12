@@ -32,10 +32,10 @@ const Router = () => {
         <HashRouter>
             <Nav current={current} />
             <Routes>
-                <Route exact path = "/" component={Public}/>
-                <Route exact path="/protected" component={Protected}/>
-                <Route exact path="/profie" component={Profile}/>
-                <Route component={Public}/>
+                <Route exact path = "/" component={<Public />}/>
+                <Route exact path="/protected" component={<Protected />}/>
+                <Route exact path="/profie" component={<Profile />}/>
+                <Route component={<Public />}/>
             </Routes>
         </HashRouter>
     );
