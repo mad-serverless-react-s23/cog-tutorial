@@ -14,7 +14,7 @@ import { // buggered this up on my own...
 } from 'react-router-dom';
 import Nav from './Nav';
 
-export const Router = () => {
+const Router = () => {
     const [current, setCurrent] = useState('home');
     useEffect(() => {
         setRoute()
@@ -40,3 +40,4 @@ export const Router = () => {
         </HashRouter>
     );
 }
+export default Router

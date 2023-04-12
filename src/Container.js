@@ -1,6 +1,6 @@
 // hold component to apply reusable styling for components
 // ({ children }) = destructuring
-export const Container = ({ children }) => (
+const Container = ({ children }) => (
     <div style={styles.container}>
         { children }
     </div>
@@ -15,5 +15,6 @@ const styles = {
     }
 };
 
+export default Container
 // all in <Container></Container> renders w/styles set in this file
 // adjust styles here for whole app

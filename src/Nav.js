@@ -7,7 +7,7 @@ import {
     FileProtectOutlined
 } from '@antd-design/icons';
 
-export const Nav = (props) => {
+const Nav = (props) => {
     const { current } = props; // choice from user: where are we? what route?
     return (
         <div>
@@ -24,7 +24,7 @@ export const Nav = (props) => {
                     </Link>
                 </Menu.Item>
                 <Menu.Item key='protected'>
-                    <Link to={'/protected'}>
+                    <Link to='/protected'>
                         <FileProtectOutlined />Protected
                     </Link>
                 </Menu.Item>
@@ -32,3 +32,4 @@ export const Nav = (props) => {
         </div>
     ); // book does not use {} around to='/this'
 }
+export default Nav

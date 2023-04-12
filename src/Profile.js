@@ -7,7 +7,7 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import Container from './Container';
 // import '@aws-amplify/ui-react/styles.css';
 
-export const Profile = () => {
+const Profile = () => {
     useEffect(() => {
         checkUser()
     }, []);
@@ -40,3 +40,4 @@ export const Profile = () => {
         </Container>
     );
 };
+export default Profile
