@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Auth } from 'aws-amplify';
 import { Authenticator } from '@aws-amplify/ui-react';
 import Container from './Container';
-import '@aws-amplify/ui-react/styles.css';
+// import '@aws-amplify/ui-react/styles.css';
 
 export const Profile = () => {
     useEffect(() => {
@@ -15,19 +15,22 @@ export const Profile = () => {
     const checkUser = async() => {
         try {
             const data = await Auth.currentUserPoolUser();
-            const userInfo = { username: data.username, 
-                ...data.attributes, };
+            const userInfo = { 
+                username: data.username, 
+                ...data.attributes 
+            }; // to know what is available if unknown, console.log(userInfo)
+            // displays information is in user object for us to utilize
             setUser(userInfo);
-        } catch (err) { console.log('error', err) };
+        } catch (err) { console.log('error: ', err) };
     };
 
     return (
         <Container>
             <Authenticator>
-                {({ signOut, userInfo }) => (
+                {({ signOut, user }) => (
                     <main>
                         <h1>Lucky you, you have a profile!</h1>
-                        <h2>Your username is {user.userName}</h2>
+                        <h2>Your username is {user.username}</h2>
                         <h3>You set your email to {user.email}</h3>
                         <h4>We don't intend to call you at {user.phone_number}</h4>
                         <button onClick={signOut}>I don't want to be here!</button>
