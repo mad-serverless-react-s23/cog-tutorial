@@ -1,12 +1,13 @@
 // hold component to apply reusable styling for components
+// ({ children }) = destructuring
 export const Container = ({ children }) => (
     <div style={StyleSheet.container}>
         { children }
     </div>
 );
-    
+// {StyleSheet.container}, { children } = jsx expressions
 
-
+// object literal
 const styles = {
     container: {
         margin: '0 auto',
