@@ -3,12 +3,16 @@
 // HashRouter sync UI and URL
 // Switch gives only first child matching location
 // Route defines comp to render via path param
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Public from './Public';
 import Profile from './Profile';
 import Protected from './Protected';
-import { HashRouter } from "react-router-dom";
-import { Switch } from "antd";
+import { // buggered this up on my own...
+    HashRouter, 
+    Switch, 
+    Route 
+} from 'react-router-dom';
+import Nav from './Nav';
 
 export const Router = () => {
     const [current, setCurrent] = useState('home');
@@ -20,7 +24,7 @@ export const Router = () => {
     }, []);
     const setRoute = () => {
         const location = window.location.href.split('/');
-        const pathname = location[location.length-1];
+        const pathname = location[location.length - 1];
         setCurrent(pathname ? pathname : 'home');
     };
 
