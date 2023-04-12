@@ -1,7 +1,7 @@
 // hold component to apply reusable styling for components
 // ({ children }) = destructuring
 export const Container = ({ children }) => (
-    <div style={StyleSheet.container}>
+    <div style={styles.container}>
         { children }
     </div>
 );
