@@ -1,13 +1,8 @@
-// routing logic defines comps and routes in app
-// sets current route in Nav with window.location.href
-// HashRouter sync UI and URL
-// Switch gives only first child matching location
-// Route defines comp to render via path param
 import React, { useEffect, useState } from 'react';
 import Public from './Public';
 import Profile from './Profile';
 import Protected from './Protected';
-import { // buggered this up on my own...
+import {
     HashRouter, 
     Routes, 
     Route 

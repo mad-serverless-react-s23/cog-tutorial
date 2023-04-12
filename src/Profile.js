@@ -1,6 +1,3 @@
-// render profile info for user.
-// add auth component for sign-up and sign-in
-// render auth form if not signed in, profile UI, sign-out button
 import React, { useState, useEffect } from 'react';
 import { Auth } from 'aws-amplify';
 import { Authenticator } from '@aws-amplify/ui-react';
@@ -18,8 +15,7 @@ const Profile = () => {
             const userInfo = { 
                 username: data.username, 
                 ...data.attributes 
-            }; // to know what is available if unknown, console.log(userInfo)
-            // displays information is in user object for us to utilize
+            }; 
             setUser(userInfo);
         } catch (err) { console.log('error: ', err) };
     };
