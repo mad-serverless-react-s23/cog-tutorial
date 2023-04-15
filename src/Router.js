@@ -10,7 +10,9 @@ import {
 import Nav from './Nav';
 
 const Router = () => {
+
     const [current, setCurrent] = useState('home');
+
     useEffect(() => {
         setRoute()
         window.addEventListener('hashchange', setRoute);
@@ -27,7 +29,7 @@ const Router = () => {
         <HashRouter>
             <Nav current={current} />
             <Routes>
-                <Route exact path = "/" component={<Public />}/>
+                <Route exact path="/" component={<Public />}/>
                 <Route exact path="/protected" component={<Protected />}/>
                 <Route exact path="/profie" component={<Profile />}/>
                 <Route component={<Public />}/>
