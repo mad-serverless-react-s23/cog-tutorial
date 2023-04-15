@@ -2,6 +2,7 @@
   "name": "cog-tutorial",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@aws-amplify/ui-react": "^4.5.1",
     "@testing-library/jest-dom": "^5.16.5",
