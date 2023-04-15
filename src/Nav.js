@@ -8,7 +8,7 @@ import {
 } from '@ant-design/icons';
 
 const Nav = (props) => {
-    const { current } = props; // choice from user: where are we? what route?
+    const { current } = props;
     return (
         <div>
             <Menu selectedKeys={(current)} 
@@ -19,17 +19,17 @@ const Nav = (props) => {
                     </Link>
                 </Menu.Item>
                 <Menu.Item key='profile'>
-                    <Link to='/profile'>
+                    <Link to={'/profile'}>
                         <ProfileOutlined />Profile
                     </Link>
                 </Menu.Item>
                 <Menu.Item key='protected'>
-                    <Link to='/protected'>
+                    <Link to={'/protected'}>
                         <FileProtectOutlined />Protected
                     </Link>
                 </Menu.Item>
             </Menu>
         </div>
-    ); // book does not use {} around to='/this'
+    );
 }
 export default Nav
