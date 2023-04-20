@@ -5,13 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 const Protected = (props) => {
     const navigate = useNavigate();
-    useEffect(() => {
+    useEffect( () => {
         Auth.currentAuthenticatedUser()
             .catch(() => {
                 navigate('/profile')
             })
-        }, 
-    []);
+        }, [])
 
     return (
         <Container>
