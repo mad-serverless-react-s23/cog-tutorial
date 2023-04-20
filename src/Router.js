@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Public from './Public';
-import Profile from './Profile';
-import Protected from './Protected';
-import {
-    HashRouter, 
-    Routes, 
-    Route 
-} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
 import Nav from './Nav';
+import Public from './Public';
+import Protected from './Protected';
+import Profile from './Profile';
 
 const Router = () => {
-
     const [current, setCurrent] = useState('home');
 
     useEffect(() => {
