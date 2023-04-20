@@ -34,5 +34,5 @@ const Profile = () => {
             </Authenticator>
         </Container>
     );
-};
+}
 export default Profile
