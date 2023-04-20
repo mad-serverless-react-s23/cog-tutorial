@@ -12,13 +12,13 @@ const Router = () => {
     useEffect(() => {
         setRoute()
         window.addEventListener('hashchange', setRoute);
-
         return () => window.removeEventListener('hashchange', setRoute)
     }, []);
+
     const setRoute = () => {
-        const location = window.location.href.split('/');
-        const pathname = location[location.length - 1];
-        setCurrent(pathname ? pathname : 'home');
+        const location = window.location.href.split('/')
+        const pathname = location[location.length - 1]
+        setCurrent(pathname ? pathname : 'home')
     };
 
     return (
