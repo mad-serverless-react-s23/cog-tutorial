@@ -23,7 +23,7 @@ const Router = () => {
 
     return (
         <HashRouter>
-            <Nav current={current} />
+            <Nav current = {current} />
             <Routes>
                 <Route exact path="/" element={<Public />}/>
                 <Route exact path="/protected" element={<Protected />}/>
@@ -31,6 +31,6 @@ const Router = () => {
                 <Route element={<Public />}/>
             </Routes>
         </HashRouter>
-    );
-};
-export default Router
+    )
+}
+export default Router;
