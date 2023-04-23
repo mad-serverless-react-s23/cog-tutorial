@@ -7,7 +7,7 @@ import Protected from './Protected';
 import Profile from './Profile';
 
 const Router = () => {
-    const [current, setCurrent] = useState('home');
+    const [current, setCurrent] = useState('home')
 
     useEffect(() => {
         setRoute()
