@@ -8,7 +8,7 @@ const Nav = (props) => {
     return (
         <div>
             <Menu selectedKeys={[current]} mode="horizontal">
-                <Menu.Item key='home>'>
+                <Menu.Item key='home'>
                     <Link to={`/`}>
                         <HomeOutlined />Home
                     </Link>
