@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from 'antd';
-import { HomeOutlined, ProfileOutlined, FileProtectOutlined } from '@ant-design/icons';
+import { HomeOutlined, ProfileOutlined, FileProtectOutlined, SmileOutlined } from '@ant-design/icons';
 
 const Nav = (props) => {
     const { current } = props;
@@ -21,6 +21,11 @@ const Nav = (props) => {
                 <Menu.Item key='protected'>
                     <Link to={'/protected'}>
                         <FileProtectOutlined />Protected
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key='lookatme'>
+                    <Link to={'/lookatme'}>
+                        <SmileOutlined />Look At Me!!!
                     </Link>
                 </Menu.Item>
             </Menu>
