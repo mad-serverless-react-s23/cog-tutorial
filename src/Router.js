@@ -5,7 +5,7 @@ import Nav from './Nav';
 import Public from './Public';
 import Protected from './Protected';
 import Profile from './Profile';
-import LookAtMe from '../LookAtMe';
+import LookAtMe from './LookAtMe';
 
 const Router = () => {
     const [current, setCurrent] = useState('home')
